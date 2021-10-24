@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import PostList from '../components/Posts/PostList';
 import { useGlobalContext } from '../context/context';
 
 const MainPage = () => {
   const { fetchAllPosts } = useGlobalContext();
-  // const [run, setRun] = useState(true);
+  const [rerender, setRerender] = useState(true);
 
   useEffect(() => {
-    // setRun(false);
-  }, []);
+    fetchAllPosts();
+    setRerender(false);
+  }, [rerender]);
   return <PostList />;
 };
 

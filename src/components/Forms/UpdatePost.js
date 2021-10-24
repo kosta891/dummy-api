@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import { rootUrl, useGlobalContext } from '../../context/context';
 import { Link, useParams } from 'react-router-dom';
 import LoadingSpinner from '../UI/LoadingSpinner';
