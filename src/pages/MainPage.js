@@ -4,12 +4,11 @@ import { useGlobalContext } from '../context/context';
 
 const MainPage = () => {
   const { fetchAllPosts } = useGlobalContext();
-  const [run, setRun] = useState(true);
+  // const [run, setRun] = useState(true);
 
   useEffect(() => {
-    fetchAllPosts();
-    setRun(false);
-  }, [run]);
+    // setRun(false);
+  }, []);
   return <PostList />;
 };
 
