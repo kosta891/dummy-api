@@ -1,0 +1,67 @@
+@import '../../global.scss';
+
+.single-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.posts.single {
+  grid-template-columns: 2fr 1fr;
+  text-align: center;
+
+  margin-bottom: 3rem;
+  .post-image {
+    text-align: center;
+  }
+  .image {
+    object-fit: cover;
+    max-height: 700px;
+    width: 100%;
+    border-radius: $radius;
+  }
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 2rem 2rem;
+    margin-bottom: 2rem;
+    p {
+      margin: 0.7rem;
+    }
+  }
+}
+
+.single-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h3 {
+    margin: 1rem;
+  }
+  .tag {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    margin: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    background: $btn-color;
+
+    &:hover {
+      background: darken($btn-color, $amount: 5%);
+    }
+  }
+
+  .button.detail {
+    display: flex;
+    height: 50px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}

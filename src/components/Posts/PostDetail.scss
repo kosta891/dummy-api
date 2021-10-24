@@ -1,0 +1,69 @@
+@import '../../global.scss';
+
+.article {
+  background: $article-color;
+  border-radius: $radius;
+  min-width: 32rem;
+  .avatar-info {
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    .avatar-image {
+      border-radius: $radius50;
+      max-height: 4.5rem;
+    }
+    p {
+      margin-left: 1rem;
+    }
+  }
+  .image {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: $radius;
+    display: block;
+  }
+
+  .article-info {
+    text-align: center;
+    h3 {
+      margin: 1rem;
+    }
+    .tag {
+      display: flex;
+      justify-content: center;
+    }
+    p {
+      margin: 1rem;
+    }
+
+    a {
+      margin-top: 0.75rem;
+
+      text-decoration: none;
+
+      color: white;
+      background: $btn-color;
+
+      &:hover {
+        background: darken($btn-color, $amount: 5%);
+      }
+    }
+
+    .button.detail {
+      display: flex;
+      height: 50px;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 40rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    min-width: 0 !important;
+  }
+}

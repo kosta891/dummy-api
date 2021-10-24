@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+
+import MainPage from './pages/MainPage.js';
+import ErrorPage from './pages/ErrorPage.js';
+import CreatePage from './pages/CreatePage.js';
+import DetailPage from './pages/DetailPage.js';
+import EditPostPage from './pages/EditPostPage.js';
+import TagPage from './pages/TagPage.js';
+import Layout from './components/UI/Layout.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Switch>
+        <Route path='/' exact>
+          <MainPage />
+        </Route>
+        <Route path='/create' exact>
+          <CreatePage />
+        </Route>
+
+        <Route path='/:id' exact>
+          <DetailPage />
+        </Route>
+        <Route path='/:id/edit' exact>
+          <EditPostPage />
+        </Route>
+
+        <Route path='/tag/:id/post' exact>
+          <TagPage />
+        </Route>
+        <Route path='*'>
+          <ErrorPage />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 
