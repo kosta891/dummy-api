@@ -78,7 +78,7 @@ const CreateComment = () => {
         <textarea
           onChange={(e) => setNewCommentInput(e.target.value)}
           value={newCommentInput}
-          cols='30'
+          cols='25'
           rows='5'
           maxLength='60'
           placeholder='Write comment...'
